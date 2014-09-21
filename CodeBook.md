@@ -1,5 +1,5 @@
 Here are details of the original data set. Below you'll find information on the project and on the transformations done.
-At the end there is a descritpion on the final clean data set.
+At the end there is a descritpion on the final clean data set. To make it easy for you, you can jump right to the section saying **From this point you will encounter new information**. Up to that location, it is all old stuff from the originl data set.
 
 ## Human Activity Recognition Using Smartphones Data Set
 
@@ -74,7 +74,9 @@ These signals were used to estimate variables of the feature vector for each pat
 - fBodyGyroMag
 - fBodyGyroJerkMag
 
-*Various sets of variables were estimated from these signals, but for the project we only used:* 
+# From this point you will encounter new information
+
+**Various sets of variables were estimated from these signals, but for the project we only used:** 
 
 - mean(): Mean value
 - std(): Standard deviation
