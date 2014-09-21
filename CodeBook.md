@@ -1,5 +1,5 @@
 Here are details of the original data set. Below you'll find information on the project and on the transformations done.
-At the end there is a descritpion of the final clean data set.
+At the end there is a descritpion on the final clean data set.
 
 ## Human Activity Recognition Using Smartphones Data Set
 
@@ -21,7 +21,7 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
 
-# For each record it is provided:
+# For each record it is provided
 
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 - Triaxial Angular velocity from the gyroscope. 
@@ -79,7 +79,7 @@ These signals were used to estimate variables of the feature vector for each pat
 - mean(): Mean value
 - std(): Standard deviation
 
-# The requirements of the projects were to
+# The requirements of the project were to
 
 1. Merge the training and the test sets to create one data set.
 2. Extract only the measurements on the mean and standard deviation for each measurement. 
@@ -87,7 +87,7 @@ These signals were used to estimate variables of the feature vector for each pat
 4. Appropriately label the data set with descriptive variable names. 
 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-# Steps performed in order to acheieve the above 
+# Steps performed in order to achieve the above 
 *(please see run_analysis.R, these comments appear there as well)*
 
 1. Read tables activity (WALKING, SITTING, etc) and features (the measurements).
@@ -96,7 +96,7 @@ These signals were used to estimate variables of the feature vector for each pat
 4. concatenate the train and test sets and add titles to columns, based on features set (assume 1st feature column matches the 1st feature etc).
 5. Add the activity name column, merging on the activityID (activities had the columns: activityID and activityName, which we can merge by).
 6. Retain only relevant measures, only those with mean or avg. we assume that titles with mean() and std() are the ones that we want.
-7. How covenient, a nice method named **aggregate** applies a FUN (in this case, mean) to all column based on grouping elements(in this case, subjectID and activityName), producing what we want.
+7. How covenient, a nice method named **aggregate** applies a FUN (in this case, mean) to all column based on grouping elements (in this case, subjectID and activityName), producing what we want.
 8. Change header names to signify it is now averages.
 9. Last thing: write the tidy file to disk.
 
