@@ -104,6 +104,6 @@ These signals were used to estimate variables of the feature vector for each pat
 
 The set is comprised of a row per (subjectID, activity) pair, where for each measurement the average is calculated. Only those measurements which are mean() and std() in the original data set appear in the final tidy set.
 
-Here is an screenshot
+Here is a screenshot
 
-![ScreenShot](https://raw.github.com/{username}/{repository}/{branch}/{path})
+![ScreenShot](https://github.com/ycaesari/GettingAndCleaningData/blob/master/Tidy%20data%20set%20screenshot.png)
