@@ -6,7 +6,7 @@ In this repository, you'll find -
 
 **README.md** - this file.
 
-**run_analysis.R** - Code to create the tidy data set as required by the project. It is assumed that the zip file from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip is already open and its root is set as the current working directory. The file contains comments and it explains the transformations done in order to clean the data.
+**run_analysis.R** - Code to create the tidy data set as required by the project. It is assumed that the zip file from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip is already unzipped and its root is set as the current working directory. The file contains comments and it explains the transformations done in order to clean the data.
 
 **CodeBook.md** - A code book that describes the variables, the data, and any transformations or work that I performed to clean the data.
 
