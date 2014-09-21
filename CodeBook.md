@@ -1,3 +1,6 @@
+Here are details of the original data set. Below you'll find information on the project and on the transformations done.
+At the end there is a descritpion of the final clean data set.
+
 ## Human Activity Recognition Using Smartphones Data Set
 
 # Abstract
@@ -29,19 +32,12 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 # The files from the original data set used in the project
 
 - 'features.txt': List of all features.
-
 - 'activity_labels.txt': Links the class labels with their activity name.
-
 - 'train/X_train.txt': Training set.
-
 - 'train/y_train.txt': Training labels.
-
 - 'test/X_test.txt': Test set.
-
 - 'test/y_test.txt': Test labels.
-
 - 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-
 - 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
 # Notes
@@ -60,47 +56,54 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+- tBodyAcc-XYZ
+- tGravityAcc-XYZ
+- tBodyAccJerk-XYZ
+- tBodyGyro-XYZ
+- tBodyGyroJerk-XYZ
+- tBodyAccMag
+- tGravityAccMag
+- tBodyAccJerkMag
+- tBodyGyroMag
+- tBodyGyroJerkMag
+- fBodyAcc-XYZ
+- fBodyAccJerk-XYZ
+- fBodyGyro-XYZ
+- fBodyAccMag
+- fBodyAccJerkMag
+- fBodyGyroMag
+- fBodyGyroJerkMag
 
-Various sets of variables were estimated from these signals, but for the project we only used: 
+*Various sets of variables were estimated from these signals, but for the project we only used:* 
 
-mean(): Mean value
-std(): Standard deviation
+- mean(): Mean value
+- std(): Standard deviation
 
 # The requirements of the projects were to
 
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive variable names. 
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+1. Merge the training and the test sets to create one data set.
+2. Extract only the measurements on the mean and standard deviation for each measurement. 
+3. Use descriptive activity names to name the activities in the data set
+4. Appropriately label the data set with descriptive variable names. 
+5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-# Steps performed in order to acheieve the above (please see run_analysis.R, these comments appear there as well)
+# Steps performed in order to acheieve the above 
+*(please see run_analysis.R, these comments appear there as well)*
 
-1. Read general tables: activity and features.
-2. Read the train set (set, activity ids, and subjects) and add to it the activity and subject columns.
-3. Read the test set (set, activity ids, and subjects) and add to it the activity and subject columns.
-4. concatenate the train and test sets and add titles to columns.
-5. Add the activity name column, merging on the activityID (activities had the columns: activityID and activityName).
-6. Retain only relevant columns, only those with mean or avg. Of course, keep the subjectID and activityName. we assume that titles with mean() and std() are the ones that we want.
-7. How covenient, a nice method named *aggregate* applies a FUN (in this case, mean) to all column based on grouping elements(in this case, subjectID and activityName), producing what we want.
+1. Read tables activity (WALKING, SITTING, etc) and features (the measurements).
+2. Read the train set (set itself, activity ids, and subjects) and add to it the activity and subject columns.
+3. Read the test set (set itself, activity ids, and subjects) and add to it the activity and subject columns.
+4. concatenate the train and test sets and add titles to columns, based on features set (assume 1st feature column matches the 1st feature etc).
+5. Add the activity name column, merging on the activityID (activities had the columns: activityID and activityName, which we can merge by).
+6. Retain only relevant measures, only those with mean or avg. we assume that titles with mean() and std() are the ones that we want.
+7. How covenient, a nice method named **aggregate** applies a FUN (in this case, mean) to all column based on grouping elements(in this case, subjectID and activityName), producing what we want.
 8. Change header names to signify it is now averages.
 9. Last thing: write the tidy file to disk.
 
+# The final tidy set
 
+The set is comprised of a row per (subjectID, activity) pair, where for each measurement the average is calculated. Only those measurements which are mean() and std() in the original data set appear in the final tidy set.
+
+Here is an screenshot
+
+![ScreenShot](https://raw.github.com/{username}/{repository}/{branch}/{path})
